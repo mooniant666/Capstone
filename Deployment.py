@@ -1,11 +1,10 @@
 import streamlit as st
-# import joblib
-# import pandas as pd
+import pickle
 
 # Load the pre-trained models
-rf_model_L = joblib.load('rf_model_L.pkl')
-rf_model_M = joblib.load('rf_model_M.pkl')
-rf_model_H = joblib.load('rf_model_H.pkl')
+rf_model_L = pickle.load('rf_model_L.pkl')
+rf_model_M = pickle.load('rf_model_M.pkl')
+rf_model_H = pickle.load('rf_model_H.pkl')
 
 # Function to make predictions based on the model and input data
 def predict_failure(model, input_data):
